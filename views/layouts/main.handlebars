@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tech Blog 3000!</title>
+  <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+
+
+
+<body>
+  <div class="wrapper">
+     <header>
+    <div>
+      <h2>Tech Blog 3000!</h2>
+    </div>
+    
+    
+    
+    <nav>
+        <a href="/">Home   </a>
+        {{#if loggedIn}}
+        <a href="/dashboard">Dashboard</a>
+        <button id="logout" class="btn-no-style">Logout</button>
+        {{else}}
+        <a href="/login">Login</a>
+        {{/if}}
+    </nav>
+    <br>
+    
+  </header>
+    <main>
+      {{{ body }}}
+    </main>
+    <footer>
+      Brought to you by  <a href="https://www.github.com/sweetfreak">Sweetfreak</a>
+    </footer>
+  </div>
+
+</body>
+    {{#if loggedIn}}
+    <script src="/javascript/logout.js"></script>
+    {{/if}}
+</html>

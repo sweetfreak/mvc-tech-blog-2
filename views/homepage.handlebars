@@ -1,0 +1,11 @@
+
+
+<ol class="post-list">
+  {{#each posts as |post|}}
+  <li>
+    {{> post-info post }}
+  </li>
+  {{/each}}
+</ol>
+
+<a href="/new-post" class="new-post">Create New Post!</a>
